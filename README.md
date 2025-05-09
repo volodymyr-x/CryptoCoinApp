@@ -1,8 +1,4 @@
-# flutter_application_1
-
-A new Flutter project.
-
-## Getting Started
+Get list of cryptocurrencies with latest details
 
 This project is a starting point for a Flutter application.
 
