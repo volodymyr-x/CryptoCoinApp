@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "C:\\Android\\FlutterSDK\\flutter\\packages\\flutter_tools\\gradle\\src\\main\\groovy\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Android\\AndroidStudioProjects\\CryptoCoinApp\\android\\app\\.cxx\\Debug\\1c5cn4r1\\arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Android\\sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Android\\AndroidStudioProjects\\CryptoCoinApp\\android\\app\\.cxx\\Debug\\1c5cn4r1\\arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}
