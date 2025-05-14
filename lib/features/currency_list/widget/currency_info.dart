@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/repository/model/currency.dart';
+import 'package:flutter_application_1/router/router.gr.dart';
 
 class CurrencyItemView extends StatelessWidget {
   const CurrencyItemView({
@@ -28,9 +30,8 @@ class CurrencyItemView extends StatelessWidget {
       ),
       trailing: const Icon(Icons.arrow_forward_ios),
       onTap: () => {
-        Navigator.of(context).pushNamed(
-          '/currency',
-          arguments: currency,
+        AutoRouter.of(context).push(
+          CurrencyInfoRoute(currency: currency),
         )
       },
     );

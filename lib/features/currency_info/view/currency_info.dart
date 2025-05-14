@@ -1,3 +1,4 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/features/currency_info/bloc/currency_info_bloc.dart';
 import 'package:flutter_application_1/features/currency_info/features/base_card.dart';
@@ -6,8 +7,14 @@ import 'package:flutter_application_1/repository/model/currency.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 
+@RoutePage()
 class CurrencyInfoPage extends StatefulWidget {
-  const CurrencyInfoPage({super.key});
+  const CurrencyInfoPage({
+    super.key,
+    required this.currency,
+  });
+
+  final Currency currency;
 
   @override
   State<CurrencyInfoPage> createState() => _CurrencyInfoPageState();
@@ -15,26 +22,11 @@ class CurrencyInfoPage extends StatefulWidget {
 
 class _CurrencyInfoPageState extends State<CurrencyInfoPage> {
   final _currencyItemBloc = CurrencyItemBloc(GetIt.I<CurrencyRepository>());
-  Currency? currency;
 
   @override
   void initState() {
-    if (currency != null) {
-      _currencyItemBloc.add(LoadCurrencyInfo(currency: currency!));
-    }
+    _currencyItemBloc.add(LoadCurrencyInfo(currency: widget.currency));
     super.initState();
-  }
-
-  @override
-  void didChangeDependencies() {
-    var args = ModalRoute.of(context)?.settings.arguments;
-    assert(args != null && args is Currency,
-        'Args is missing or not a CurrencyDto');
-
-    currency = args as Currency;
-    _currencyItemBloc.add(LoadCurrencyInfo(currency: currency!));
-    setState(() {});
-    super.didChangeDependencies();
   }
 
   @override

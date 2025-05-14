@@ -5,15 +5,18 @@ import 'package:get_it/get_it.dart';
 import 'package:talker_flutter/talker_flutter.dart';
 
 class CurrencyApp extends StatelessWidget {
-  const CurrencyApp({super.key});
+  CurrencyApp({super.key});
+
+  final _appRouter = AppRouter();
 
   @override
-  Widget build(BuildContext context) {    
-    return MaterialApp(
+  Widget build(BuildContext context) {
+    return MaterialApp.router(
       title: 'Flutter Demo',
       theme: theme,
-      routes: routes,
-      navigatorObservers: [TalkerRouteObserver(GetIt.I<Talker>())],
+      routerConfig: _appRouter.config(
+        navigatorObservers: () => [TalkerRouteObserver(GetIt.I<Talker>())],
+      ),
     );
   }
 }

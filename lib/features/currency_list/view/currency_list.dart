@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/features/currency_list/bloc/currency_list_bloc.dart';
 import 'package:flutter_application_1/features/currency_list/widget/currency_info.dart';
@@ -7,6 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:talker_flutter/talker_flutter.dart';
 
+@RoutePage()
 class CurrencyListPage extends StatefulWidget {
   const CurrencyListPage({super.key});
 
@@ -67,7 +69,7 @@ class _CurrencyListPageState extends State<CurrencyListPage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                      const Text('Currency list loasing error'),
+                      const Text('Currency list loading error'),
                       TextButton(
                         child: const Text('try again'),
                         onPressed: () => loadCurrencyList(),

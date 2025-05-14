@@ -13,17 +13,8 @@ CurrencyData _$CurrencyDataFromJson(Map<String, dynamic> json) => CurrencyData(
           : CurrencyDisplay.fromJson(json['DISPLAY'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$CurrencyDataToJson(CurrencyData instance) {
-  final val = <String, dynamic>{
-    'CoinInfo': instance.coinInfo,
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('DISPLAY', instance.currencyDisplay);
-  return val;
-}
+Map<String, dynamic> _$CurrencyDataToJson(CurrencyData instance) =>
+    <String, dynamic>{
+      'CoinInfo': instance.coinInfo,
+      if (instance.currencyDisplay case final value?) 'DISPLAY': value,
+    };

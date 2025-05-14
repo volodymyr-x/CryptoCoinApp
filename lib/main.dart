@@ -33,5 +33,5 @@ void main() {
   FlutterError.onError =
       (details) => talker.handle(details.exception, details.stack);
   runTalkerZonedGuarded(
-      talker, () => runApp(const CurrencyApp()), (error, stack) {});
+      talker, () => runApp(CurrencyApp()), (error, stack) {});
 }
