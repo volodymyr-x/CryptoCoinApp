@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/repository/model/currency.dart';
 import 'package:flutter_application_1/router/router.gr.dart';
 
-class CurrencyItemView extends StatelessWidget {
-  const CurrencyItemView({
+class CurrencyListItem extends StatelessWidget {
+  const CurrencyListItem({
     super.key,
     required this.currency,
       });  

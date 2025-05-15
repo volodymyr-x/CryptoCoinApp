@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/features/currency_list/bloc/currency_list_bloc.dart';
-import 'package:flutter_application_1/features/currency_list/widget/currency_info.dart';
+import 'package:flutter_application_1/features/currency_list/widget/currency_list_item.dart';
 import 'package:flutter_application_1/repository/currency_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
@@ -61,7 +61,7 @@ class _CurrencyListPageState extends State<CurrencyListPage> {
                     separatorBuilder: (context, index) => const Divider(),
                     itemBuilder: (context, index) {
                       final currency = state.currencyList[index];
-                      return CurrencyItemView(currency: currency);
+                      return CurrencyListItem(currency: currency);
                     });
               } else if (state is CurrencyListError) {
                 return Center(
