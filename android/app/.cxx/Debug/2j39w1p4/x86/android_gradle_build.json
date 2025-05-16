@@ -1,0 +1,28 @@
+{
+  "buildFiles": [
+    "/Users/volodymyr_x/Android/flutter/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/volodymyr_x/Library/Android/sdk/cmake/3.18.1/bin/ninja",
+      "-C",
+      "/Users/volodymyr_x/Android/projects/CryptoCoinApp/android/app/.cxx/Debug/2j39w1p4/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/volodymyr_x/Library/Android/sdk/cmake/3.18.1/bin/ninja",
+    "-C",
+    "/Users/volodymyr_x/Android/projects/CryptoCoinApp/android/app/.cxx/Debug/2j39w1p4/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {},
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/Users/volodymyr_x/Library/Android/sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/Users/volodymyr_x/Library/Android/sdk/ndk/26.3.11579264/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": []
+}

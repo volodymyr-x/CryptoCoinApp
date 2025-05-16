@@ -1,0 +1,2 @@
+/Users/volodymyr_x/Android/projects/CryptoCoinApp/android/app/.cxx/Debug/h5m4g192/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/volodymyr_x/Android/projects/CryptoCoinApp/android/app/.cxx/Debug/h5m4g192/arm64-v8a/CMakeFiles/rebuild_cache.dir
